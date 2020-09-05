@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AsiikPro</string>
+    <string name="title_activity_selec_asset">Map</string>
 </resources>
