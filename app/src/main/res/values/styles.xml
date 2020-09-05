@@ -25,11 +25,36 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/grey8</item>
         <item name="backgroundTint">@color/colorAccent</item>
+        <item name="rippleColor">#26FFB919</item>
         <item name="fontFamily">@font/sfbold</item>
         <item name="android:textSize">16sp</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:insetBottom">2dp</item>
         <item name="android:insetTop">2dp</item>
+    </style>
+
+    <style name="OutlinedButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/sfbold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey7</item>
+        <item name="strokeColor">@color/colorAccent</item>
+        <item name="rippleColor">#26FFB919</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
+    </style>
+
+    <style name="SmallOutlinedButtonStyle" parent="OutlinedButtonStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:insetBottom">5dp</item>
+        <item name="android:insetTop">5dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/grey4</item>
     </style>
 
 </resources>

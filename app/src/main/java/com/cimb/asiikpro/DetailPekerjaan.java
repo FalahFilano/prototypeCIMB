@@ -53,7 +53,7 @@ public class DetailPekerjaan extends AppCompatActivity {
         binding.btnIsiForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DetailPekerjaan.this, FormSOP.class);
+                Intent intent = new Intent(DetailPekerjaan.this, FormInspeksi.class);
                 //intent.putExtras(bundle);
                 startActivity(intent);
             }
