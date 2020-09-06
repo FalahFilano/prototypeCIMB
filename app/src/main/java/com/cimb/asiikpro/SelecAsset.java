@@ -3,15 +3,17 @@ package com.cimb.asiikpro;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class SelecAsset extends FragmentActivity implements OnMapReadyCallback {
+public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
 
@@ -41,7 +43,19 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback {
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        Marker mSydney = mMap.addMarker(new MarkerOptions().position(sydney).title("Sydney"));
+        mSydney.setTag("Sydney");
+
+        mMap.setOnMarkerClickListener(this);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        String tag = (String) marker.getTag();
+
+        Toast.makeText(this, tag + " was clicked.", Toast.LENGTH_SHORT).show();
+
+        return true;
     }
 }
