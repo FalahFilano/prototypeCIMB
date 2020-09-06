@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cimb.asiikpro">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,7 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialThemeActionbar">
-
+        <activity android:name=".FormTemuan"
+            android:launchMode="singleTop"
+            android:parentActivityName=".IsiInspeksi"/>
+        <activity
+            android:name=".IsiInspeksi"
+            android:launchMode="singleTop"
+            android:parentActivityName=".FormInspeksi" />
+        <activity
+            android:name=".FormInspeksi"
+            android:launchMode="singleTop"
+            android:parentActivityName=".DetailPekerjaan" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,7 +40,7 @@
 
         <activity
             android:name=".SelecAsset"
-            android:label="@string/title_activity_selec_asset"></activity>
+            android:label="@string/title_activity_selec_asset" />
         <activity
             android:name=".DetailPekerjaan"
             android:launchMode="singleTop"
