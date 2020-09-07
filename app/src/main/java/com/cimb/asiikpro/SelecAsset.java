@@ -2,6 +2,7 @@ package com.cimb.asiikpro;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -13,7 +14,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, BottomsheetAsset.BottomSheetListener {
 
     private GoogleMap mMap;
 
@@ -25,8 +26,9 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-    }
 
+
+    }
 
     /**
      * Manipulates the map once available.
@@ -48,14 +50,26 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
 
         mMap.setOnMarkerClickListener(this);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
     }
 
     @Override
     public boolean onMarkerClick(Marker marker) {
         String tag = (String) marker.getTag();
 
-        Toast.makeText(this, tag + " was clicked.", Toast.LENGTH_SHORT).show();
+        BottomsheetAsset bottomsheet = new BottomsheetAsset();
+        bottomsheet.show(getSupportFragmentManager(), "asset");
+
+//        Toast.makeText(this, tag + " was clicked.", Toast.LENGTH_SHORT).show();
 
         return true;
+    }
+
+    @Override
+    public void onButtonClicked(String text) {
+
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(SelecAsset.this, FormInspeksi.class));
+
     }
 }
