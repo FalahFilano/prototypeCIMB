@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         binding.cvInspeksi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DetailPekerjaan.class);
+                Intent intent = new Intent(MainActivity.this, ListPekerjaan.class);
                 startActivity(intent);
             }
         });

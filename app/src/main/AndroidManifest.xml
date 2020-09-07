@@ -15,7 +15,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialThemeActionbar">
-        <activity android:name=".Korektif"></activity>
+        <activity android:name=".ListPekerjaan"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DetailTemuan"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Korektif" />
+        <activity
+            android:name=".Korektif"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".BottomsheetAsset" />
         <activity
             android:name=".FormTemuan"
@@ -47,7 +57,7 @@
         <activity
             android:name=".DetailPekerjaan"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ListPekerjaan" />
         <activity
             android:name=".FormSOP"
             android:launchMode="singleTop"
