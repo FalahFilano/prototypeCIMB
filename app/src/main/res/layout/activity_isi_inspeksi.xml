@@ -212,64 +212,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginLeft="@dimen/side_margin"
-                    android:layout_marginRight="@dimen/side_margin"
-                    android:text="Kompressor AC"
-                    android:textColor="@color/grey8"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/sfbold"/>
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="@dimen/side_margin"
-                    android:layout_marginRight="@dimen/side_margin">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="0dp"
-                        android:minHeight="0dp"
-                        android:text="Baik"
-                        android:textSize="14sp"
-                        android:textColor="@color/grey7"
-                        android:fontFamily="@font/sfmedium"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="36dp"
-                        android:minWidth="0dp"
-                        android:minHeight="0dp"
-                        android:text="Buruk"
-                        android:textSize="14sp"
-                        android:textColor="@color/grey7"
-                        android:fontFamily="@font/sfmedium"/>
-
-                </RadioGroup>
-
-                <View
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="24dp"
-                    style="@style/Divider"
-                    android:layout_height="8dp"
-                    android:background="@color/grey1"
-                    android:layout_width="match_parent"/>
-
-            </LinearLayout>
+            android:orientation="vertical"
+            android:paddingTop="24dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -295,6 +239,7 @@
                     android:layout_marginRight="@dimen/side_margin">
 
                     <RadioButton
+                        android:id="@+id/item2positive"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:minWidth="0dp"
@@ -305,6 +250,7 @@
                         android:fontFamily="@font/sfmedium"/>
 
                     <RadioButton
+                        android:id="@+id/item2negative"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="36dp"
@@ -318,6 +264,8 @@
                 </RadioGroup>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/detail_temuan"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/side_margin"
@@ -543,7 +491,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="24dp"
                     android:layout_marginLeft="@dimen/side_margin"
                     android:layout_marginRight="@dimen/side_margin"
                     android:hint="Pilih"
@@ -561,6 +508,23 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                style="@style/Divider"
+                android:layout_height="8dp"
+                android:background="@color/grey1"
+                android:layout_width="match_parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ButtonStyle"
+                android:layout_marginLeft="@dimen/side_margin"
+                android:layout_marginRight="@dimen/side_margin"
+                android:layout_marginBottom="16dp"
+                android:text="Selanjutnya"/>
 
         </LinearLayout>
 

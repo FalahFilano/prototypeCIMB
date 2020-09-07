@@ -1,8 +1,11 @@
 package com.cimb.asiikpro;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -44,13 +47,12 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        Marker mSydney = mMap.addMarker(new MarkerOptions().position(sydney).title("Sydney"));
-        mSydney.setTag("Sydney");
+        LatLng sydney = new LatLng(-6.2981362, 106.6665901);
+        Marker mSydney = mMap.addMarker(new MarkerOptions().position(sydney).title("ATM CIMB Niaga"));
+        mSydney.setTag("ATM CIMB Niaga");
 
         mMap.setOnMarkerClickListener(this);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0f));
     }
 
     @Override
@@ -67,9 +69,6 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
 
     @Override
     public void onButtonClicked(String text) {
-
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
         startActivity(new Intent(SelecAsset.this, FormInspeksi.class));
-
     }
 }

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialThemeActionbar">
-        <activity android:name=".Korektif"></activity>
+        <activity android:name=".FotoSesudahInspeksi"></activity>
+        <activity android:name=".Korektif" />
         <activity android:name=".BottomsheetAsset" />
         <activity
             android:name=".FormTemuan"

@@ -2,6 +2,7 @@ package com.cimb.asiikpro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -25,6 +26,13 @@ public class FormTemuan extends AppCompatActivity {
 
         setDropdown();
 
+        binding.btnSimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(Activity.RESULT_OK);
+                finish();
+            }
+        });
     }
 
     private void setDropdown() {
