@@ -1,11 +1,17 @@
 package com.cimb.asiikpro;
 
+import androidx.annotation.DrawableRes;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -13,6 +19,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -42,6 +50,7 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -50,6 +59,7 @@ public class SelecAsset extends FragmentActivity implements OnMapReadyCallback, 
         LatLng sydney = new LatLng(-6.2981362, 106.6665901);
         Marker mSydney = mMap.addMarker(new MarkerOptions().position(sydney).title("ATM CIMB Niaga"));
         mSydney.setTag("ATM CIMB Niaga");
+
 
         mMap.setOnMarkerClickListener(this);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0f));

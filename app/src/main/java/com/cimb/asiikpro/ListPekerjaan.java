@@ -20,7 +20,7 @@ public class ListPekerjaan extends AppCompatActivity {
         setContentView(view);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Inspeksi");
+        getSupportActionBar().setTitle("List Pekerjaan");
 
         binding.materialCardView5.setOnClickListener(new View.OnClickListener() {
             @Override
