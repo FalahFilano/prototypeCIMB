@@ -10,10 +10,24 @@
     >
 
     <TextView
+        android:id="@+id/tvSemuaPekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Semua Pekerjaan"
+        android:textColor="@color/grey7"
+        android:background="@color/grey1"
+        android:textSize="16sp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="@dimen/side_margin"
+        android:paddingRight="@dimen/side_margin"
+        />
+
+    <TextView
         android:id="@+id/tvPekerjaan1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pekerjaan 1"
+        android:text="Inspeksi Kondisi AC"
         android:textColor="@color/grey7"
         android:textSize="16sp"
         android:paddingBottom="16dp"
@@ -26,7 +40,7 @@
         android:id="@+id/tvPekerjaan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pekerjaan 2"
+        android:text="Cek Suhu Ruangan"
         android:textColor="@color/grey7"
         android:textSize="16sp"
         android:paddingBottom="16dp"
@@ -39,7 +53,7 @@
         android:id="@+id/tvPekerjaan3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pekerjaan 3"
+        android:text="Inspeksi Pintu ATM"
         android:textColor="@color/grey7"
         android:textSize="16sp"
         android:paddingBottom="16dp"

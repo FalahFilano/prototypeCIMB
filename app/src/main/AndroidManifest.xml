@@ -16,8 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/MaterialThemeActionbar">
         <activity android:name=".FotoSesudahInspeksi"></activity>
-        <activity android:name=".Korektif" />
-        <activity android:name=".BottomsheetAsset" />
+        <activity android:name=".ListPekerjaan"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DetailTemuan"
+            android:launchMode="singleTop"
+            android:parentActivityName=".Korektif" />
+        <activity
+            android:name=".Korektif"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FormTemuan"
             android:launchMode="singleTop"
@@ -48,7 +57,7 @@
         <activity
             android:name=".DetailPekerjaan"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ListPekerjaan" />
         <activity
             android:name=".FormSOP"
             android:launchMode="singleTop"

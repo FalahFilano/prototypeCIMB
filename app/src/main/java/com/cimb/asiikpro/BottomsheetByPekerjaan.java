@@ -24,6 +24,15 @@ public class BottomsheetByPekerjaan extends BottomSheetDialogFragment {
         View v = inflater.inflate(R.layout.bottomsheet_bypekerjaan, container, false);
 
         final TextView tv1 = v.findViewById(R.id.tvPekerjaan1);
+        final TextView semuaPekerjaan = v.findViewById(R.id.tvSemuaPekerjaan);
+
+        semuaPekerjaan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetListener.onButtonClicked(semuaPekerjaan.getText().toString());
+                dismiss();
+            }
+        });
 
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
